@@ -24,10 +24,8 @@ $('.dianhuaka .ul1 li').hover(function(){
  })
  
  $('.yt ul li').hover(function(){
- 	$('.da').stop().slideDown(1000);
- },function(){
-    $('.da').stop().slideUp(1000);
- })
+ 	$(this).find('.da').stop().slideToggle(1000);
+ });
  
  //轮播图
  
@@ -170,6 +168,18 @@ $(".banner").hover(function () {
  	$('.prev').css('color','rgba(0,0,0,0)');
  	$('.next').css('color','rgba(0,0,0,0)');
  })
+ 
+ 
+ $('.prev').click(function(){
+ 	$('.div3').css('margin-left','-290px');
+ 	$('.div3').css('transition','all 2s');
+ })
+ 
+ $('.next').click(function(){
+ 	$('.div3').css('margin-left','0px');
+ 	$('.div3').css('transition','all 2s');
+ }) 
+ 
  
         
 
